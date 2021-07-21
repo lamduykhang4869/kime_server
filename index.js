@@ -174,9 +174,8 @@ MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology: true }, func
             })
         });
 
-        const port = process.env.PORT || 8080;
-        app.listen(port, () => {
-            console.log('MongoDB server listening on port', port)
+        app.listen(process.env.PORT || 3000, () => {
+            console.log('MongoDB server listening on port', 3000);
         });
     }
 })
