@@ -175,8 +175,8 @@ MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology: true }, func
         });
 
         // Start Web Server
-        app.listen(3000, () => {
-            console.log("Connected to MongoDB Server, WebService running on port 3000");
+        app.listen(8080, () => {
+            console.log("Connected to MongoDB Server, WebService running on port 8080");
         });
     }
 })
