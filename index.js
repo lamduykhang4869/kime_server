@@ -45,7 +45,7 @@ var MongoClient = mongodb.MongoClient;
 // Connection URL
 var url = 'mongodb://localhost:27017' // 27017 is default port
 
-MongoClient.connect(url, {useNewUrlParser:true, useUnifiedTopology: true }, function (err, client){
+MongoClient.connect(process.env.MONGODB_URI || url, {useNewUrlParser:true, useUnifiedTopology: true }, function (err, client){
     if (err) 
         console.log("Unable to connect to the MongoDB server. Error:", err);
     else{
